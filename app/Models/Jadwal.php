@@ -22,4 +22,9 @@ class Jadwal extends Model
             $model->id = Str::uuid();
         });
     }
+
+    public function pemesanans()
+    {
+        return $this->hasMany(Pemesanan::class, 'jadwal_id');
+    }
 }

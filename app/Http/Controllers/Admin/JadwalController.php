@@ -24,6 +24,7 @@ class JadwalController extends Controller
     public function store(JadwalRequest $jadwalRequest, ResponseFormatter $responseFormatter)
     {
         $data = $jadwalRequest->validated();
+        $data['sisa'] = $data['kuota'];
         $jadwal = Jadwal::create($data);
         try {
             return $responseFormatter->success($jadwal, 'Berhasil Dibuat!', 201);

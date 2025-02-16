@@ -16,8 +16,10 @@ return new class extends Migration
             $table->string('tujuan');
             $table->string('tgl');
             $table->string('waktu');
-            $table->string('kuota');
             $table->string('harga');
+            $table->string('kuota');
+            $table->string('sisa');
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }

@@ -18,6 +18,7 @@ class JadwalResource extends JsonResource
             'id' => $this->id,
             'tujuan' => $this->tujuan,
             'kuota' => $this->kuota,
+            'sisa' => $this->sisa,
             'tgl' => $this->tgl,
             'waktu' => $this->waktu,
             'harga' => $this->harga,
